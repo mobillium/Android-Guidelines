@@ -2,10 +2,11 @@
 ## Creating Layouts & Views using XML
 
 We are creating the layout files using XML with ConstraintLayout.
-We are avoiding using the nested views as much as we can. Instead of that, we are preferring the flat view hierarchy.
+We avoid using the nested views as much as we can. Instead of that, we prefer the flat view hierarchy.
 
 
 ##
+
 ### We are preferring the View Binding library for binding the views.
 #### What are the benefits of the View Binding?
 
@@ -20,7 +21,10 @@ of the generated object.
 
 #### Conclusion
 
-View Binding needs lesser code than the findViewByID and ButterKnife,		
+**The advantages of the view binding are**
 
+- It only references the IDs from the current layout.
+- Kotlin Synthetics only supports Kotlin, while ViewBinding supports both Kotlin & Java.
+- It's always null safe and it requires a lesser code than the ButterKnife.
 
 ##
