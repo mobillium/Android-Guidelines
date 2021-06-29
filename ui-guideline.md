@@ -28,3 +28,5 @@ of the generated object.
 - It's always null safe and it requires a lesser code than the ButterKnife.
 
 ##
+
+We always stay away from using the hardcoded values inside the XML layouts. We prefer to access the values from the resource files like **styles.xml** , **strings.xml**.   
