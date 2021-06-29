@@ -30,3 +30,5 @@ of the generated object.
 ##
 
 We always stay away from using the hardcoded values inside the XML layouts. We prefer to access the values from the resource files like **styles.xml** , **strings.xml**.   
+
+We are making debug the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering)** preference on the Developer Options on our Android devices, also we are checking the UI issues by using the **[Layout Inspector](https://developer.android.com/studio/debug/layout-inspector)** 
