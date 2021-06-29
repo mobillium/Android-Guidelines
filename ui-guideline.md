@@ -36,5 +36,11 @@ We are making debug the GPU Overdraw issue by enabling the **[Debug GPU Overdraw
 ##
 MotionLayout and Animations will be added
 ##
+- We always aiming the re-usability, we are using the include tag, or we are creating the Custom View as possible.
+- We are using the Shape Drawables instead of the PNG or WEBP files. 
 
+ Our rule set when choosing SVG or WEBP is
+  -
+  -
+  -
 ## Theming
