@@ -7,7 +7,7 @@ We use SharedPreferences , Room or File for storage data locally.
 - We also prefer to use [Encrypted SharedPreferences](https://developer.android.com/topic/security/data)
  for storage sensitive data.
 
-# What is the best practices while using SharedPreferences for us?
+### What is the best practices while using SharedPreferences for us?
 - When we using getSharedPreferences() to create or access sharedPreferences objects, we always use MODE_PRIVATE. That way, only your app can access the information with in the shared preferences file.
 - We prefer to write helper class for manage all SharedPreferences operation like write or read data. This helper class is include generic function thus we use sharedPreferences easily.
 - We don't prefer to use SharedPreferences to transfer data.
