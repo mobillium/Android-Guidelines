@@ -1,4 +1,9 @@
 # UI Guideline
+### Table of Contents
+1. [Creating Layouts & Views using XML](#creating_layouts)
+2. [Theming](#theming)
+
+<a name="creating_layouts"></a>
 ## Creating Layouts & Views using XML
 
 We are creating the layout files using XML with ConstraintLayout.
@@ -51,7 +56,7 @@ MotionLayout and Animations will be added
   - If it's not contains any gradient tag.   (You can use the VectorDrawable which contains a gradient tag by creating separate VectorDrawables for the different       API levels. so that you can use the VectorDrawable which contains a gradient tag for the API >=24, and you can use the other one which doesn't contain the       gradient tag for lower API levels. )
 
 ##
-
+<a name="theming"></a>
 ## Theming
 
 ### styles.xml
