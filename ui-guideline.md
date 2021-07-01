@@ -42,9 +42,22 @@ MotionLayout and Animations will be added
 - We always staw away from use the RecyclerView inside NestedScrollView because it can disable the "recycle" function of the RecyclerView.
 - We are using the Shape Drawables instead of the PNG or WEBP files. 
 
-** Regarding the Android Documentation, we recommend that you limit a vector image to a maximum **200x200** dp, otherwise it can take too long to draw, because since the vector graphics are rendered at runtime, rendering of a VectorDrawable will be slower than the PNG file.
+** Regarding the Android Documentation, we recommend to limit a vector image to a maximum **200x200** dp, otherwise it can take too long to draw, because since the vector graphics are rendered at runtime, rendering of a VectorDrawable will be slower than the PNG file.
+
+
  Our rule set when choosing SVG is
-  -If it's smaller than the 200*200dp
-  -If it's not contains so many detail on itself
-  -If it's not contains any gradient tag (You can use the VectorDrawable which contains a gradient tag by creating separate VectorDrawables for the different API levels. so that you can use the VectorDrawable which contains a gradient tag for the API >=24, and you can use the other one which doesn't contain the gradient tag for lower API levels. ).
+  - If it's smaller than the 200*200dp
+  - If it's not contains so many detail on itself
+  - If it's not contains any gradient tag.   (You can use the VectorDrawable which contains a gradient tag by creating separate VectorDrawables for the different       API levels. so that you can use the VectorDrawable which contains a gradient tag for the API >=24, and you can use the other one which doesn't contain the       gradient tag for lower API levels. )
+
+##
+
 ## Theming
+
+### styles.xml
+
+##
+### dimens.xml
+
+##
+
