@@ -1,6 +1,6 @@
 <h1 align="center">UI Guideline</h1></br>
 <p align="center"> 
-You can find it out the suggestions and things we paying attention to when Creating the layouts and Views.
+You can find it out the suggestions and things that we paying attention when creating UI elements.
 </p>
 
 ### Table of Contents
