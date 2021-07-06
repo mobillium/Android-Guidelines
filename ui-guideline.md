@@ -1,4 +1,8 @@
-# UI Guideline
+<h1 align="center">UI Guideline</h1></br>
+<p align="center"> 
+You can find it out the suggestions and things we paying attention to when Creating the layouts and Views.
+</p>
+
 ### Table of Contents
 1. [Creating Layouts & Views using XML](#creating_layouts)
 2. [Theming](#theming)
