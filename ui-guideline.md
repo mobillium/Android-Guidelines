@@ -12,7 +12,7 @@ You can find it out the suggestions and things we paying attention to when Creat
 
 - We are creating the layout files using ConstraintLayout.
    - When using the ConstraintLayout, we take care to support layout mirroring by applying these rules.  (https://developer.android.com/training/basics/supporting-devices/languages#MirroringUpdateResources)
-- We avoid using the nested views as much as we can. Instead of that, we prefer the flat view hierarchy.
+- We avoid from using the nested views as much as we can. Instead of that, we prefer the flat view hierarchy.
 - We prefer to use the drawables(shapes, vectordrawables etc.) instead of Images.
 - We always stay away from using the hardcoded values inside the XML layouts. We prefer to get the values from the resource files like **styles.xml** ,        **strings.xml**.   
 - One of our most important aims when creating a layout is reusability. Therefore, we take care to use custom views and styles.
@@ -67,11 +67,20 @@ MotionLayout and Animations will be added
 ##
 <a name="theming"></a>
 ## Theming
+- We always stay away from using the hardcoded values inside the XML layouts. We prefer to get the values from the resource files like **styles.xml** ,        **strings.xml**.   
 
-### styles.xml
+It provides us App-level consistency and it makes it easy to create new layouts or views.
 
-##
-### dimens.xml
 
-##
 
+
+
+### There are some different XML files to provide a theme experience.
+
+| Name        | Purpose |
+|-------------|---------|
+| styles  |    --     |
+| colors  | An XML file that is using to store all the color variables that use by the app.       |
+| themes  |    --      |
+| dimens  | An XML file that is using to store all the dimension values that are used by the app.        |
+| strings  |         |
