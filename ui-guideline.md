@@ -139,7 +139,7 @@ It provides us App-level consistency and it makes it easy to create new layouts 
 We will just define the attributes for single time in the styles.xml, 
 
 ```gradle
-<style name="MyPerfectTextview">
+<style name="MyPerfectTextView">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
         <item name="android:layout_marginStart">10dp</item>
@@ -162,14 +162,14 @@ It's our new Layout file!
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.appcompat.widget.AppCompatTextView
-        style="@style/MyPerfectTextview"
+        style="@style/MyPerfectTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
     <androidx.appcompat.widget.AppCompatTextView
-        style="@style/MyPerfectTextview"
+        style="@style/MyPerfectTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
