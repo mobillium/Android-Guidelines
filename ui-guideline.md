@@ -22,7 +22,7 @@ You can find it out the suggestions and things that we paying attention when cre
 
 ##
 
-### We are preferring the View Binding library for binding the views.
+### We prefer the View Binding library for binding the views.
 #### What are the benefits of the View Binding?
 
 View Binding generates binding classes for all layouts in the app,
@@ -79,8 +79,8 @@ It provides us App-level consistency and it makes it easy to create new layouts 
 
 | Name        | Purpose |
 |-------------|---------|
-| styles  |    --     |
-| colors  | An XML file that is using to store all the color variables that use by the app.       |
-| themes  |    --      |
-| dimens  | An XML file that is using to store all the dimension values that are used by the app.        |
-| strings  |         |
+| styles  |    Stores the defined styles, which are attributes of the Views.     |
+| colors  | Contains all the defined color codes used by the Application.       |
+| themes  |    Themes are the parents of the styles. All the screens can have different themes and the themes file contains all the defined theme values.    |
+| dimens  | Contains all the defined dimension values inside of it. So that we can use them for the styling.   |
+| strings  | Contains all the string values used by the Application, also it can be used for Localization. |
