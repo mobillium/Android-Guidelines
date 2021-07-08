@@ -84,3 +84,103 @@ It provides us App-level consistency and it makes it easy to create new layouts 
 | themes  |    Themes are the parents of the styles. All the screens can have different themes and the themes file contains all the defined theme values.    |
 | dimens  | Contains all the defined dimension values inside of it. So that we can use them for the styling.   |
 | strings  | Contains all the string values used by the Application, also it can be used for Localization. |
+
+<br>
+
+### Benefits of the theming.
+
+
+-  Scenario: We want to have two TextViews with a few attributes in the same layout. 
+
+
+
+   We were going to have this kind of code for this purpose without theming.
+```gradle
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:visibility="visible"
+        android:fontFamily="@font/example_font"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:background="@drawable/bg_purple_radius"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:visibility="visible"
+        android:fontFamily="@font/example_font"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:background="@drawable/bg_purple_radius"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout> 
+```
+
+#### But what if we used the theming?
+
+We will just define the attributes for single time in the styles.xml, 
+
+```gradle
+<style name="MyPerfectTextview">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:fontFamily">@font/example_font</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">start</item>
+        <item name="android:background">@drawable/bg_purple_radius</item>
+        <item name="android:lines">1</item>
+        <item name="android:marqueeRepeatLimit">"marquee_forever</item>
+    </style>
+
+```
+
+It's our new Layout file! 
+
+```gradle
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/MyPerfectTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/MyPerfectTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+```
+
+So, in the end, when we think about it on the whole app level, it provides us cleaner, more readable, and reusable codes.
+
+
+
+ 
