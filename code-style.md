@@ -14,10 +14,8 @@
 ## 1.1. File Naming
 In this article we'll look into naming some project files such as classes, drawables, layouts etc.
 
+### 1.1.1. Classes
+- We are using [Upper Camel Case](https://en.wikipedia.org/wiki/Camel_case). Such as: ``ProductDetail.kt``
+- Android component class names should end with component names. Such as: ``ProductDetailActivity`` or ``ChangeUserNameDialog``
+- Special and numeric characters should not use in class names.
 
-```kotlin
-// Sample code Block for Kotlin
-// Bar.kt
-class Bar { }
-fun Runnable.toBar(): Bar = // …
-```
