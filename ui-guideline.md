@@ -1,23 +1,26 @@
 <h1 align="center">UI Guideline</h1></br>
 <p align="center"> 
-You can find it out the suggestions and things that we paying attention when creating UI elements.
+You can find out the suggestions and things that we are paying attention when creating the UI elements.
 </p>
 
 ### Table of Contents
 1. [Creating Layouts & Views using XML](#creating_layouts)
 2. [Theming](#theming)
+3. [Animations](#animations)
 
 <a name="creating_layouts"></a>
-## Creating Layouts & Views using XML
+## Creating the User Interfaces
 
 - We are creating the layout files using ConstraintLayout.
    - When using the ConstraintLayout, we take care to support layout mirroring by applying these rules.  (https://developer.android.com/training/basics/supporting-devices/languages#MirroringUpdateResources)
 - We avoid from using the nested views as much as we can. Instead of that, we prefer the flat view hierarchy.
 - We prefer to use the drawables(shapes, vectordrawables etc.) instead of Images.
 - We always stay away from using the hardcoded values inside the XML layouts. We prefer to get the values from the resource files like **styles.xml** ,        **strings.xml**.   
-- One of our most important aims when creating a layout is reusability. Therefore, we take care to use custom views and styles.
+- One of our most important aims when creating a layout is reusability and consistency. Therefore, we take care to use custom views and styles for using common UI elements.
 - We always aim to supporting different pixel densities and providing alternative bitmaps for the different screen sizes.
-
+- We are using the AppCompat libraries because, 
+   Appcompats are (AppCompatTextView,AppCompatButton etc.) supports compatible features on older versions of the platform so they allows access to new APIs on       older API versions of the platform.
+      Further Information (https://developer.android.com/jetpack/androidx/releases/appcompat) 
 
 
 ##
@@ -50,10 +53,9 @@ of the generated object.
 We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering)** preference on the Developer Options on our Android devices, also we are checking the UI issues by using the **[Layout Inspector](https://developer.android.com/studio/debug/layout-inspector)** 
 
 ##
-MotionLayout and Animations will be added
-##
-- We always aiming for the reusability, we are using the include tag, or we are creating the Custom Views.
-- We always staw away from use the RecyclerView inside NestedScrollView because it can disable the "recycle" function of the RecyclerView.
+
+- We always aim for the reusability, we are using the include tag, or we are creating the Custom Views or we are using the styles.
+- We always stay away from use the RecyclerView inside NestedScrollView because it can disable the "recycle" function of the RecyclerView.
 - We are using the Shape Drawables instead of the PNG or WEBP files. 
 
 ** Regarding the Android Documentation, we recommend to limit a vector image to a maximum **200x200** dp, otherwise it can take too long to draw, because since the vector graphics are rendered at runtime, rendering of a VectorDrawable will be slower than the PNG file.
@@ -181,6 +183,13 @@ It's our new Layout file!
 
 So, in the end, when we think about it on the whole app level, it provides us cleaner, more readable, and reusable codes.
 
+##
 
+<a name="animations"></a>
+## Animations
+We prefer to use the MotionLayout for the Animations. MotionLayout is a layout which is a subclass of the ConstraintLayout, and has a backward compatibility to API level 14. You can create your animations by using the MotionScenes, then you can apply your MotionScenes to the MotionLayout by using the "app:layoutDescription" tag.  
 
+For Further Information: https://developer.android.com/training/constraint-layout/motionlayout
  
+ 
+ ##
