@@ -88,6 +88,8 @@ It provides us App-level consistency and it makes it easy to create new layouts 
 | strings  | Contains all the string values used by the Application, also it can be used for Localization. |
 
 <br>
+ [Themes versus Styles](https://developer.android.com/guide/topics/ui/look-and-feel/themes#versus)
+
 
 ### Benefits of the theming.
 
