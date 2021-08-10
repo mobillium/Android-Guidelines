@@ -5,8 +5,9 @@ You can find out the suggestions and things that we are paying attention when cr
 
 ### Table of Contents
 1. [Creating Layouts & Views using XML](#creating_layouts)
-2. [Theming](#theming)
-3. [Animations](#animations)
+2. [Custom Views](#custom_views)
+3. [Theming](#theming)
+4. [Animations](#animations)
 
 <a name="creating_layouts"></a>
 ## Creating the User Interfaces
@@ -67,6 +68,25 @@ We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https:/
   - If it's not contains any gradient tag.   (You can use the VectorDrawable which contains a gradient tag by creating separate VectorDrawables for the different       API levels. so that you can use the VectorDrawable which contains a gradient tag for the API >=24, and you can use the other one which doesn't contain the       gradient tag for lower API levels. )
 
 ##
+<a name="custom_views"></a>
+## Custom Views
+Custom views are the way to create the views with custom functions and visuals on Android SDK.
+
+
+Regarding the Android documentation, Custom views should be;
+
+  - Conform to Android standards
+  - Provide custom styleable attributes that work with Android XML   
+layouts
+  - Send accessibility events
+  - Be compatible with multiple Android platforms.
+
+**[Creating a View Class](https://developer.android.com/training/custom-views/create-view)
+
+- We extend the Custom View classes from the closest native Android View class. It provides the functionality of the parent view. So, if you planning to        create a custom TextView that has more features than the regular TextView, you should extend your Custom View from the TextView class.
+- We use the ```android:contentDescription``` attribute to provide an experience with the [Accesibility](https://www.android.com/accessibility/).
+- We pay attention to checking the isInEditMode variable before doing the data related things. If you pay attention to the edit mode variable, you will be able to see the Preview of your Custom View on the Preview screens.
+
 <a name="theming"></a>
 ## Theming
 - We always stay away from using the hardcoded values inside the XML layouts. We prefer to get the values from the resource files like **styles.xml** ,        **strings.xml**.   
