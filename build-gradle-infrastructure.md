@@ -12,14 +12,12 @@ We prefer to use Kotlin Programming Language in Build Gradle files.
 ```text
 
 ├── ProjectFolder
-  ├── ...
   ├── app
-    ├── ...
     ├── build.gradle.kts
+    ├── ...
 
   ├── buildSrc
     ├── src
-      ├── ...
       ├── main
         ├── kotlin
           ├── commons
@@ -38,14 +36,15 @@ We prefer to use Kotlin Programming Language in Build Gradle files.
           ├── BuildType.kt
           ├── Dependencies.kt
     ├── build.gradle.kts
+    ├── ...
   
   ├── data
-    ├── ...
     ├── build.gradle.kts
+    ├── ...
   
   ├── domain
-    ├── ...
     ├── build.gradle.kts
+    ├── ...
     
   ├── build.gradle.kts
   ├── settings.gradle.kts
