@@ -47,3 +47,5 @@ Layout file names should include android component names at first of the name an
 
 If we creating an adapter item view, should start name of the layout with `item_`.
 
+Sometimes we are create complex layouts. When we created complex ui pieces in another layout files, layout file name should start with `partial_`.
+
