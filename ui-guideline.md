@@ -73,7 +73,7 @@ We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https:/
 Custom views are the way to create the views with custom functions and visuals on Android SDK.
 
 
-Regarding the Android documentation, Custom views should be;
+Regarding the Android documentation, Custom views should;
 
   - Conform to Android standards
   - Provide custom styleable attributes that work with Android XML   
@@ -81,11 +81,21 @@ layouts
   - Send accessibility events
   - Be compatible with multiple Android platforms.
 
+#### Rule Set for choosing the way that provides us the Reusability
+#### There are alternative ways to create reusable views, and we have a rule set when we are trying to choose one of them.
+ 
+- If the view is constant and if there is no logic inside of them, then we prefer to use the __include tags__. 
+- If the view is not constant and not contains any logic, and also if we are able to handle this by using the styling, then we prefer to use the __styles__. 
+- If the view has its own business logic with complex views, then we prefer to use the __Custom Views__.
+
 **[Creating a View Class](https://developer.android.com/training/custom-views/create-view)
 
 - We extend the Custom View classes from the closest native Android View class. It provides the functionality of the parent view. So, if you planning to        create a custom TextView that has more features than the regular TextView, you should extend your Custom View from the TextView class.
 - We use the ```android:contentDescription``` attribute to provide an experience with the [Accesibility](https://www.android.com/accessibility/).
 - We pay attention to checking the isInEditMode variable before doing the data related things. If you pay attention to the edit mode variable, you will be able to see the Preview of your Custom View on the Preview screens.
+- We create public functions inside the custom view for the necessary things that should be accessible by the Developer.
+
+
 
 <a name="theming"></a>
 ## Theming
