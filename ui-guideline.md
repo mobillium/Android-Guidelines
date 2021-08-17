@@ -17,7 +17,7 @@ You can find out the suggestions and things that we are paying attention when cr
    - When using the ConstraintLayout, we take care to support layout mirroring by applying [these rules. (developer.android.com)](https://developer.android.com/training/basics/supporting-devices/languages#MirroringUpdateResources)
 - We avoid from using the nested views as much as we can. Instead of that, we prefer the flat view hierarchy.
 - We prefer to use the drawables(shapes, vectordrawables etc.) instead of Images.
-- We always stay away from using the hardcoded values inside the XML layouts. We prefer to get the values from the resource files like **styles.xml** ,        **strings.xml**.   
+- We always stay away from using the hardcoded values inside the XML layouts. We prefer to get the values from the resource files like **styles.xml** ,        **strings.xml** , **dimens.xml**.   
 - One of our most important aims when creating a layout is reusability and consistency. Therefore, we take care to use custom views and styles for using common UI elements.
 - We always aim to supporting different pixel densities and providing alternative bitmaps for the different screen sizes.
 - We are using the AppCompat libraries because, 
