@@ -4,7 +4,7 @@ You can find out the suggestions and things that we are paying attention when cr
 </p>
 
 ### Table of Contents
-1. [Creating Layouts & Views using XML](#creating_layouts)
+1. [Creating the User Interfaces](#creating_layouts)
 2. [Custom Views](#custom_views)
 3. [Debugging the Views](#debugging_views)
 4. [Theming](#theming)
@@ -14,7 +14,7 @@ You can find out the suggestions and things that we are paying attention when cr
 ## Creating the User Interfaces
 
 - We are creating the layout files using ConstraintLayout.
-   - When using the ConstraintLayout, we take care to support layout mirroring by applying these rules.  (https://developer.android.com/training/basics/supporting-devices/languages#MirroringUpdateResources)
+   - When using the ConstraintLayout, we take care to support layout mirroring by applying [these rules. (developer.android.com)](https://developer.android.com/training/basics/supporting-devices/languages#MirroringUpdateResources)
 - We avoid from using the nested views as much as we can. Instead of that, we prefer the flat view hierarchy.
 - We prefer to use the drawables(shapes, vectordrawables etc.) instead of Images.
 - We always stay away from using the hardcoded values inside the XML layouts. We prefer to get the values from the resource files like **styles.xml** ,        **strings.xml**.   
@@ -22,7 +22,7 @@ You can find out the suggestions and things that we are paying attention when cr
 - We always aim to supporting different pixel densities and providing alternative bitmaps for the different screen sizes.
 - We are using the AppCompat libraries because, 
    Appcompats are (AppCompatTextView,AppCompatButton etc.) supports compatible features on older versions of the platform so they allows access to new APIs on       older API versions of the platform.
-      Further Information (https://developer.android.com/jetpack/androidx/releases/appcompat) 
+      [Further Information (developer.android.com)](https://developer.android.com/jetpack/androidx/releases/appcompat) 
 - We always aim for the reusability, we are using the include tag, or we are creating the Custom Views or we are using the styles.
 - We always stay away from use the RecyclerView inside NestedScrollView because it can disable the "recycle" function of the RecyclerView.
 - We are using the Shape Drawables instead of the PNG or WEBP files. 
@@ -56,7 +56,7 @@ of the generated object.
 - It's always null safe and it requires a lesser code than the ButterKnife.
 
 
-   You can take a look for more detailed comprasion https://developer.android.com/topic/libraries/view-binding
+   You can take a look for more [detailed comprasion (developer.android.com)](https://developer.android.com/topic/libraries/view-binding)
    
 ##
 
@@ -80,17 +80,18 @@ layouts
 - If the view is not constant and not contains any logic, and also if we are able to handle this by using the styling, then we prefer to use the __styles__. 
 - If the view has its own business logic with complex views, then we prefer to use the __Custom Views__.
 
-**[Creating a View Class](https://developer.android.com/training/custom-views/create-view)
+
+[Creating a View Class (developer.android.com)](https://developer.android.com/training/custom-views/create-view)
 
 - We extend the Custom View classes from the closest native Android View class. It provides the functionality of the parent view. So, if you planning to        create a custom TextView that has more features than the regular TextView, you should extend your Custom View from the TextView class.
-- We use the ```android:contentDescription``` attribute to provide an experience with the [Accesibility](https://www.android.com/accessibility/).
+- We use the ```android:contentDescription``` attribute to provide an experience with the [Accesibility. (android.com)](https://www.android.com/accessibility/)
 - We pay attention to checking the isInEditMode variable before doing the data related things. If you pay attention to the edit mode variable, you will be able to see the Preview of your Custom View on the Preview screens.
 - We create public functions inside the custom view for the necessary things that should be accessible by the Developer.
 
 <a name="debugging_views"></a>
 ## Debugging the Views
 
-We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering)** preference on the Developer Options on our Android devices, also we are checking the UI issues by using the **[Layout Inspector](https://developer.android.com/studio/debug/layout-inspector)** 
+We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw (developer.android.com)](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering)** preference on the Developer Options on our Android devices, also we are checking the UI issues by using the **[Layout Inspector (developer.android.com)](https://developer.android.com/studio/debug/layout-inspector)** 
 
 
 <a name="theming"></a>
@@ -113,8 +114,7 @@ It provides us App-level consistency and it makes it easy to create new layouts 
 | dimens  | Contains all the defined dimension values inside of it. So that we can use them for the styling.   |
 | strings  | Contains all the string values used by the Application, also it can be used for Localization. |
 
-<br>
- [Themes versus Styles](https://developer.android.com/guide/topics/ui/look-and-feel/themes#versus)
+[Themes versus Styles (developer.android.com)](https://developer.android.com/guide/topics/ui/look-and-feel/themes#versus)
 
 
 ### Benefits of the theming.
@@ -217,7 +217,7 @@ So, in the end, when we think about it on the whole app level, it provides us cl
 ## Animations
 We prefer to use the MotionLayout for the Animations. MotionLayout is a layout which is a subclass of the ConstraintLayout, and has a backward compatibility to API level 14. You can create your animations by using the MotionScenes, then you can apply your MotionScenes to the MotionLayout by using the "app:layoutDescription" tag.  
 
-For Further Information: https://developer.android.com/training/constraint-layout/motionlayout
+[For Further Information (developer.android.com)](https://developer.android.com/training/constraint-layout/motionlayout)
  
  
  ##
