@@ -5,9 +5,10 @@ You can find out the suggestions and things that we are paying attention when cr
 
 ### Table of Contents
 1. [Creating Layouts & Views using XML](#creating_layouts)
-2. [Custom Views](#custom_views)
-3. [Theming](#theming)
-4. [Animations](#animations)
+2. [Debugging the Views](#debugging_views)
+3. [Custom Views](#custom_views)
+4. [Theming](#theming)
+5. [Animations](#animations)
 
 <a name="creating_layouts"></a>
 ## Creating the User Interfaces
@@ -22,8 +23,18 @@ You can find out the suggestions and things that we are paying attention when cr
 - We are using the AppCompat libraries because, 
    Appcompats are (AppCompatTextView,AppCompatButton etc.) supports compatible features on older versions of the platform so they allows access to new APIs on       older API versions of the platform.
       Further Information (https://developer.android.com/jetpack/androidx/releases/appcompat) 
+- We always aim for the reusability, we are using the include tag, or we are creating the Custom Views or we are using the styles.
+- We always stay away from use the RecyclerView inside NestedScrollView because it can disable the "recycle" function of the RecyclerView.
+- We are using the Shape Drawables instead of the PNG or WEBP files. 
+** Regarding the Android Documentation, we recommend to limit a vector image to a maximum **200x200** dp, otherwise it can take too long to draw, because since the vector graphics are rendered at runtime, rendering of a VectorDrawable will be slower than the PNG file.
 
 
+ Our rule set when choosing SVG is
+  - If it's smaller than the 200*200dp
+  - If it's not contains so many detail on itself
+  - If it's not contains any gradient tag.   (You can use the VectorDrawable which contains a gradient tag by creating separate VectorDrawables for the different       API levels. so that you can use the VectorDrawable which contains a gradient tag for the API >=24, and you can use the other one which doesn't contain the       gradient tag for lower API levels. )
+  
+  
 ##
 
 ### We prefer the View Binding library for binding the views.
@@ -48,24 +59,10 @@ of the generated object.
 
    You can take a look for more detailed comprasion https://developer.android.com/topic/libraries/view-binding
 ##
-
+<a name="debugging_views"></a>
 ## Debugging the Views
 
 We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering)** preference on the Developer Options on our Android devices, also we are checking the UI issues by using the **[Layout Inspector](https://developer.android.com/studio/debug/layout-inspector)** 
-
-##
-
-- We always aim for the reusability, we are using the include tag, or we are creating the Custom Views or we are using the styles.
-- We always stay away from use the RecyclerView inside NestedScrollView because it can disable the "recycle" function of the RecyclerView.
-- We are using the Shape Drawables instead of the PNG or WEBP files. 
-
-** Regarding the Android Documentation, we recommend to limit a vector image to a maximum **200x200** dp, otherwise it can take too long to draw, because since the vector graphics are rendered at runtime, rendering of a VectorDrawable will be slower than the PNG file.
-
-
- Our rule set when choosing SVG is
-  - If it's smaller than the 200*200dp
-  - If it's not contains so many detail on itself
-  - If it's not contains any gradient tag.   (You can use the VectorDrawable which contains a gradient tag by creating separate VectorDrawables for the different       API levels. so that you can use the VectorDrawable which contains a gradient tag for the API >=24, and you can use the other one which doesn't contain the       gradient tag for lower API levels. )
 
 ##
 <a name="custom_views"></a>
