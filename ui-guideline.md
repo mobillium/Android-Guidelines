@@ -5,8 +5,8 @@ You can find out the suggestions and things that we are paying attention when cr
 
 ### Table of Contents
 1. [Creating Layouts & Views using XML](#creating_layouts)
-2. [Debugging the Views](#debugging_views)
-3. [Custom Views](#custom_views)
+2. [Custom Views](#custom_views)
+3. [Debugging the Views](#debugging_views)
 4. [Theming](#theming)
 5. [Animations](#animations)
 
@@ -59,12 +59,6 @@ of the generated object.
 
    You can take a look for more detailed comprasion https://developer.android.com/topic/libraries/view-binding
 ##
-<a name="debugging_views"></a>
-## Debugging the Views
-
-We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering)** preference on the Developer Options on our Android devices, also we are checking the UI issues by using the **[Layout Inspector](https://developer.android.com/studio/debug/layout-inspector)** 
-
-##
 <a name="custom_views"></a>
 ## Custom Views
 Custom views are the way to create the views with custom functions and visuals on Android SDK.
@@ -92,6 +86,10 @@ layouts
 - We pay attention to checking the isInEditMode variable before doing the data related things. If you pay attention to the edit mode variable, you will be able to see the Preview of your Custom View on the Preview screens.
 - We create public functions inside the custom view for the necessary things that should be accessible by the Developer.
 
+<a name="debugging_views"></a>
+## Debugging the Views
+
+We inspect the GPU Overdraw issue by enabling the **[Debug GPU Overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering)** preference on the Developer Options on our Android devices, also we are checking the UI issues by using the **[Layout Inspector](https://developer.android.com/studio/debug/layout-inspector)** 
 
 
 <a name="theming"></a>
