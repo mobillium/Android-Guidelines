@@ -50,7 +50,7 @@ We prefer to use Kotlin Programming Language in Build Gradle files.
   ├── ...
 
 ```
-#
+### android-library.gradle.kts
 - We write our build logics, which we use repeatedly in our commons package as plugin and apply these plugins to our modules.
 - We keep our applied plugins configurations in plugins packages files that we created.
 
