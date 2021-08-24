@@ -49,3 +49,19 @@ If we creating an adapter item view, should start name of the layout with `item_
 
 Sometimes we are create complex layouts. When we created complex ui pieces in another layout files, layout file name should start with `partial_`.
 
+### 1.1.4. Variables
+All of the class variable name should start with lowercase except constants and continue with camel case rule. Somthing like:
+```kotlin
+private val userName
+private var buttonSelectItem
+private var textViewUserName
+```
+For CONSTANT VARIABLE we should use ALL UPPER CASE SEPARATE WORD WITH UNDERSCORE.. Such as;
+```kotlin
+const val SELECTED_SIZE_ITEM = 1
+```
+When we created an android widget base variable, variable name should start with the widget name. Such as;
+```kotlin
+private val textViewEventTitle
+private var checkBoxPcivacyPolicy
+```
