@@ -65,3 +65,5 @@ When we created an android widget base variable, variable name should start with
 private val textViewEventTitle
 private var checkBoxPcivacyPolicy
 ```
+### 1.1.5. Functions
+Functions should written in `lowerCamelCase`. Like; `setUserName`, `isEmpty`
