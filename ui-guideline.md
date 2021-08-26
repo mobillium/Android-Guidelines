@@ -9,7 +9,7 @@ You can find out the suggestions and things that we are paying attention when cr
 3. [Debugging the Views](#debugging_views)
 4. [Theming](#theming)
 5. [Animations](#animations)
-
+6. [Designing the Smooth Splash Screen](#splash_screen)
 <a name="creating_layouts"></a>
 ## Creating the User Interfaces
 
@@ -221,3 +221,18 @@ We prefer to use the MotionLayout for the Animations. MotionLayout is a layout w
  
  
  ##
+ 
+<a name="splash_screen"></a>
+## Designing the Smooth Splash Screen
+
+We don't have any Splash Mechanism on Android before the API 31, There is a white screen, or UI lag on most of the apps when they try to Render the Splash Screen. 
+But we think that the Splash screen should be fast, smooth, and lightweight. So, the idea is it should be fast and the reason for the UI lag is rendering the Splash XML view. So, what we are doing is we are not using anything that extends from the View, also we are not setting any layout to the Splash Activity. 
+
+In short, the Splash Activity doesn't have any call to setContentView function.
+
+
+We use the theming on the Splash activities or fragments for providing a smooth app launch experience.
+
+Firstly we create a drawable that just holds an item that contains a bitmap of the app logo, then we are creating a style that uses this drawable as its "android:background" then we are setting this style as the theme of our Splash Activity.
+
+In the end, the Activity doesn't have any setContentView block or any rendering process. Since the Splash Activity doesn't have anything to render it works super fast.
