@@ -245,7 +245,7 @@ In the end, the Activity doesn't have any setContentView block or any rendering 
 <a name="material_design"></a>
 ## Material Design and Dark Mode
 > Android users expect your app to look and behave in a way that’s consistent with the platform. You should follow material 
-> design guidelines for visual and navigation patterns… [---(d.android.com/design)](https://d.android.com/design)
+> design guidelines for visual and navigation patterns… --[(d.android.com/design)](https://d.android.com/design)
 
 We recommend using the Material Design Components.
 
