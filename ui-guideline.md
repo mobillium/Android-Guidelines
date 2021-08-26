@@ -10,6 +10,7 @@ You can find out the suggestions and things that we are paying attention when cr
 4. [Theming](#theming)
 5. [Animations](#animations)
 6. [Designing the Smooth Splash Screen](#splash_screen)
+7. [Material Design and Dark Mode](#material_design)
 <a name="creating_layouts"></a>
 ## Creating the User Interfaces
 
@@ -238,3 +239,31 @@ We use the theming on the Splash activities or fragments for providing a smooth 
 Firstly we create a drawable that just holds an item that contains a bitmap of the app logo, then we are creating a style that uses this drawable as its "android:background" then we are setting this style as the theme of our Splash Activity.
 
 In the end, the Activity doesn't have any setContentView block or any rendering process. Since the Splash Activity doesn't have anything to render it works super fast.
+
+ ##
+ 
+<a name="material_design"></a>
+## Material Design and Dark Mode
+> Android users expect your app to look and behave in a way that’s consistent with the platform. You should follow material 
+> design guidelines for visual and navigation patterns… [---(d.android.com/design)](https://d.android.com/design)
+
+We recommend using the Material Design Components.
+
+The material components are a way to provide easily customizable UI components with consistency.
+
+The material components also provide you the default styles and some built-in attributes, without the material components we were required to create some shape drawable for almost every customization on the Views. 
+
+For example, for adding some radius corners to a Button, we were required to create some XML drawable files.. 
+
+but with Material Components, it's simple as possible. We just making the same thing by just using this attributes with Material Components.
+
+```gradle
+<com.google.android.material.button.MaterialButton
+   ....
+   style="@style/Widget.MaterialComponents.Button"
+   app:cornerRadius=".."
+   app:strokeColor="@color/colorPrimary"/>
+```
+
+The material theme also has a dark theme guide and it's easy to implement the dark mode on the Material Components. 
+[https://material.io](https://material.io/design/color/dark-theme.html#usage )
