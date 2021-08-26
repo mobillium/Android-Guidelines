@@ -67,3 +67,6 @@ private var checkBoxPcivacyPolicy
 ```
 ### 1.1.5. Functions
 Functions should written in `lowerCamelCase`. Like; `setUserName`, `isEmpty`
+
+### 1.1.6. Packages
+Ther is a many of usage about package names but we recommend using all lower case in package name. Somthing like; `productdetail`, `mainoperations`
