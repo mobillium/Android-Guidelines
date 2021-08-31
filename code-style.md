@@ -22,15 +22,15 @@ In this article we'll look into naming some project files such as classes, drawa
 ### 1.1.2. Drawables
 - First of all we should decide to using in which widget the drawables. Button, BottomBar or Dialog etc.
 
-| Asset Type   | Prefix            |		Example                    |
+| Asset Type   | Prefix            |		Example                  |
 |--------------| ------------------|-----------------------------|
 | Action bar   | `action_bar_`     | `ab_stacked.9.png`          |
-| Button       | `button_`	        | `btn_send_pressed.9.png`    |
+| Button       | `button_`	       | `btn_send_pressed.9.png`    |
 | Dialog       | `dialog_`         | `dialog_top.9.png`          |
 | Divider      | `divider_`        | `divider_horizontal.9.png`  |
-| Icon         | `ic_`	            | `ic_star.png`               |
+| Icon         | `ic_`	           | `ic_star.png`               |
 | Menu         | `menu_	`          | `menu_submenu_bg.9.png`     |
-| Notification | `notification_`	  | `notification_bg.9.png`     |
+| Notification | `notification_`	 | `notification_bg.9.png`     |
 | Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
 - We are recommend naming icons like below;
@@ -43,6 +43,11 @@ In this article we'll look into naming some project files such as classes, drawa
 | Status bar icons                | `ic_stat_notify`   | `ic_stat_notify_msg.png`     |
 | Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
 | Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
+
+- And in some cases, we may create drawables which using in different widgets. At this point we should name drawables with this rule;
+- `[bg]_[gradient or not]_[color]_[radius amount]`
+- For example; `bg_gradient_red_8dp.xml`
+
 
 ### 1.1.3. Layouts
 Layout file names should include android component names at first of the name and there is a `_` character between the words.
