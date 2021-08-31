@@ -22,17 +22,27 @@ In this article we'll look into naming some project files such as classes, drawa
 ### 1.1.2. Drawables
 - First of all we should decide to using in which widget the drawables. Button, BottomBar or Dialog etc.
 
-The prefixes determined for each widget are as follows;
-- `Button` -> `btn_`
-- `AactionBar` -> `ab_`
-- `Dialog` -> `dialog_`
-- `Divider` -> `divider_`
-- `Icon` -> `ic_`
-- `Menu` -> `menu_`
-- `Tabs` -> `tab_`
+| Asset Type   | Prefix            |		Example                    |
+|--------------| ------------------|-----------------------------|
+| Action bar   | `action_bar_`     | `ab_stacked.9.png`          |
+| Button       | `button_`	        | `btn_send_pressed.9.png`    |
+| Dialog       | `dialog_`         | `dialog_top.9.png`          |
+| Divider      | `divider_`        | `divider_horizontal.9.png`  |
+| Icon         | `ic_`	            | `ic_star.png`               |
+| Menu         | `menu_	`          | `menu_submenu_bg.9.png`     |
+| Notification | `notification_`	  | `notification_bg.9.png`     |
+| Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
-To give an example;
- - First we add prefix and than add the purpose of this drawable. Such as; `dialog_backGround.xml` or `dialog_btn_positive` etc.
+- We are recommend naming icons like below;
+
+| Asset Type                      | Prefix             | Example                      |
+| --------------------------------| ----------------   | ---------------------------- |
+| Icons                           | `ic_`              | `ic_star.png`                |
+| Launcher icons                  | `ic_launcher`      | `ic_launcher_calendar.png`   |
+| Menu icons and Action Bar icons | `ic_menu`          | `ic_menu_archive.png`        |
+| Status bar icons                | `ic_stat_notify`   | `ic_stat_notify_msg.png`     |
+| Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
+| Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
 
 ### 1.1.3. Layouts
 Layout file names should include android component names at first of the name and there is a `_` character between the words.
