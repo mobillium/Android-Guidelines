@@ -1,6 +1,6 @@
-<center> <h1>NETWORK LAYER</h1> </center>
+<h1 align="center">NETWORK LAYER</h1>
 
-<center> <h5>_The best practices that we follow when creating our network layer_</h5> </center>
+<h5 align="center">The best practices that we follow when creating our network layer</h5>
 
 ### Table of Contents
 1. [Common Libraries That We Use](#common_libraries)
