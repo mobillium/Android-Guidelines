@@ -46,6 +46,37 @@
 <h3>MAPPERS</h3>
 
 - When using two type of data model classes, we use our mappers to map one type of model class to another one.
+
+-- Let's say we have a BasketResponse model class to fetch the related data from server:
+
+	class BasketResponse(
+		@SerializedName("productID")
+		val productID: String,
+		@SerializedName("totalPrice")
+		val totalPrice: Double,
+		@SerializedName("unitCount")
+		val unitCounts: Int
+	): BaseResponse
+	
+-- And a BasketResult model class to use in the presentation layer.
+
+	class BasketResult(
+		val id: String,
+		val basketAmount: Double,
+		val units: Int
+	)
+	
+-- In the Mapper Class we create an extension function to response class and map our data to the result class.
+
+	fun BasketResponse.toDomainModel() = BasketResult(
+	    id = productID,
+	    basketAmount = totalPrice,
+	    units = unitCounts
+	)
+	
+-- Also we can manipulate the data from server such as adding currency code at the end of the price or  adding units to the end of the unit count.
+	
+
 -  With this structure; we can separate each layer with layer spesific components and be able to use our model classes in the related layers.
 
   - Mapping process happens in the Repository Layer.
