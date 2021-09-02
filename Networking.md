@@ -46,7 +46,7 @@
 <h3>MAPPERS</h3>
 
 - When using two type of data model classes, we use our mappers to map one type of model class to another one.
--  With this structure; we can separate each layer with layer spesific components and be able to use our model classes related layers.
+-  With this structure; we can separate each layer with layer spesific components and be able to use our model classes in the related layers.
 
   - Mapping process happens in the Repository Layer.
 
