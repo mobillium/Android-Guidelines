@@ -55,7 +55,7 @@
 
 	2. One for to use in the domain layer.
 
-- There are two type of data models because we don't want to have anything that related to domain layer in our network later or vice versa.
+- There are two type of model classes because we don't want to have anything that related to domain layer in our network layer or vice versa.
 
 <a name="mappers"></a>
 <h3>MAPPERS</h3>
