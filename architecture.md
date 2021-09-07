@@ -4,13 +4,49 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 </p>
 
 ### Table of Contents
-- [Example 1](#example)
-- [--](#example)
-  - [--](#example)
-  - [--](#example)
-- [--](#example)
-- [--](#example)
-  - [--](#example)
+- [app](#example)
+	- [bindings](#example)
+		- [ImageViewBindings](#example)
+		- [ToolbarBindings](#example)
+		- [...]
+	- [core](#example)
+		- [events](#example)
+			- [CommonNavigationEvent](#example)
+			- [CommonViewEvent](#example)
+		- [markers](#example)
+			- [FetchExtras](#example)
+			- [NavigationEvent](#example)
+			- [...]
+		- [BaseActivity](#example)
+		- [BaseFragment](#example)
+		- [BaseBottomSheet](#example)
+		- [BaseViewModel](#example)
+		- [...]
+	- [di](#example)
+		- [HostModule](#example)
+		- [UtilsModule](#example)
+	- [ext](#example)
+		- [ContextExt](#example)
+		- [EdittextExt](#example)
+		- [FragmentExt](#example)
+		- [...]
+	- [ui](#example)
+		- [...]
+	- [utils](#example)
+		- [...]
+	- [views](#example)
+		- [...]
+	- [--](#example)
+	- [--](#example)
+		 - [--](#example)
+- [data](#example)
+	- [di](#example)
+	- [ext](#example)
+	- [utils](#example)
+- [domain](#example)
+	- [model](#example)
+	- [repository](#example)
+	- [utils](#example)
 
 
 
