@@ -57,7 +57,7 @@
 
 - There are two type of model classes because we don't want to have anything that related to domain layer in our network layer or vice versa.
 
- -- Let's say we have a BasketResponse model class to fetch the related data from server:
+  -- Let's say we create a BasketResponse model class to fetch the related data from server:
  
  	```
 	class BasketResponse(
@@ -70,7 +70,7 @@
 	): BaseResponse
 	```
 	
- -- And a BasketResult model class to use in the presentation layer.
+  -- We create anotBasketResult model class to use in the presentation layer.
  
  	```
 	class BasketResult(
@@ -85,15 +85,16 @@
 
 - When using two type of data model classes, we use our mappers to map one type of model class to another one.
 
- -- In the Mapper Class we create an extension function to a response class and map our data to the result class.
-
+  -- In the Mapper Class we create an extension function to a response class and map our data to the result class.
+  	```
 	fun BasketResponse.toDomainModel() = BasketResult(
 	    id = productID,
 	    basketAmount = totalPrice,
 	    units = unitCounts
 	)
+	```
 	
- -- Also we can manipulate the data from server such as adding currency code at the end of the price or  adding units to the end of the unit count.
+  -- Also we can manipulate the data from server such as adding currency code at the end of the price or  adding units to the end of the unit count.
 	
 
 -  With this structure; we can separate each layer with layer spesific components and be able to use our model classes in the related layers.
