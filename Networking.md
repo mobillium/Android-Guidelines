@@ -30,7 +30,9 @@
 <h3>EXECUTING THE REQUESTS</h3>
 
 - When executing the requests, we use coroutine's suspend functions to prevent the request process to block the main thread.
+
 - We have a method called sendRequest() in our BaseViewModel and we use this function in a ViewModel whenever we want to communicate with the data source.
+
 	```
 	fun login() {
 	    sendRequest(
