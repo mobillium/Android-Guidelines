@@ -38,7 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 		- [...]
 	- [--](#example)
 	- [--](#example)
-		 - [--](#example)
+		 - [...]
 - [data](#example)
 	- [di](#example)
 	- [ext](#example)
