@@ -57,11 +57,6 @@
 
 - There are two type of model classes because we don't want to have anything that related to domain layer in our network layer or vice versa.
 
-<a name="mappers"></a>
-<h3>MAPPERS</h3>
-
-- When using two type of data model classes, we use our mappers to map one type of model class to another one.
-
  -- Let's say we have a BasketResponse model class to fetch the related data from server:
 
 	class BasketResponse(
@@ -81,7 +76,13 @@
 		val units: Int
 	)
 	
- -- In the Mapper Class we create an extension function to response class and map our data to the result class.
+
+<a name="mappers"></a>
+<h3>MAPPERS</h3>
+
+- When using two type of data model classes, we use our mappers to map one type of model class to another one.
+
+ -- In the Mapper Class we create an extension function to a response class and map our data to the result class.
 
 	fun BasketResponse.toDomainModel() = BasketResult(
 	    id = productID,
