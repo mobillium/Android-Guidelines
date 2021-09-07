@@ -29,7 +29,20 @@
 <a name="executing_requests"></a>
 <h3>EXECUTING THE REQUESTS</h3>
 
-- When executing the requests that we need, we use coroutine's suspend functions to prevent the request process to block the main thread.
+- When executing the requests, we use coroutine's suspend functions to prevent the request process to block the main thread.
+- We have a method called sendRequest() in our BaseViewModel and we use this function in a ViewModel whenever we want to communicate with the data source.
+	```
+	fun login() {
+	    sendRequest(
+	    	request = {
+		    loginRepository.login(userInfo))
+		},
+		success = {
+		    navigate(LoginFragmentDirections.loginToHomePage())
+		}
+	    )
+	}
+	```
 
 <a name="model_classes"></a>
 <h3>MODEL CLASSES</h3>
@@ -87,6 +100,8 @@
 * We abstract the Repository Layer with an interface, and store all the features that a Repository can perform in this interface. 
 
 * When we want to use these feature, we simply inject the interface to the repository and implement the features as we want to use.
+
+* With abstracting the Repository Layer, we can easily implement a mock server to mimic remote server's behavior and test different scenarios without internet access or without making any changes on remote server.
 
 <a name="error_handling"></a>
 <h3>ERROR HANDLING</h3>
