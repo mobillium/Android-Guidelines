@@ -58,7 +58,7 @@
 - There are two type of model classes because we don't want to have anything that related to domain layer in our network layer or vice versa.
 
  -- Let's say we have a BasketResponse model class to fetch the related data from server:
-
+ 	```
 	class BasketResponse(
 		@SerializedName("productID")
 		val productID: String,
@@ -67,15 +67,15 @@
 		@SerializedName("unitCount")
 		val unitCounts: Int
 	): BaseResponse
-	
+	```
  -- And a BasketResult model class to use in the presentation layer.
-
+ 	```
 	class BasketResult(
 		val id: String,
 		val basketAmount: Double,
 		val units: Int
 	)
-	
+	```
 
 <a name="mappers"></a>
 <h3>MAPPERS</h3>
