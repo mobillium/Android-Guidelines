@@ -85,3 +85,10 @@ Functions should written in `lowerCamelCase`. Like; `setUserName`, `isEmpty`
 
 ### 1.1.6. Packages
 Ther is a many of usage about package names but we recommend using all lower case in package name. Somthing like; `productdetail`, `mainoperations`
+
+# 2. Ordering
+In this section we are going to talk about some ordering solution. I said "some ordering" because there is no single correct solution for variable or function ordering.
+Bu konuda belirli bir fikir birliği yok malesef. Çeşitli dokümnalar incelendi.Sıralama konusuna birlikte karar verilmeli. Kimi dokümanda akışsal olarak bağlantılı metotlar bir arada olmalı denirken kimi dokümanda access modifiers'lara göre bir sıralama izlenilmeli görüşü var ve bunun yanında fikir birliği olan konular da mevcut.
+https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md#2210-class-member-ordering
+https://kotlinlang.org/docs/coding-conventions.html
+https://developer.android.com/kotlin/common-patterns
