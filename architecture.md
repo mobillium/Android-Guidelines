@@ -53,7 +53,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 <a name="example"></a>
 
 <a name="example"></a>
-## Example Title
+## App Layer (Presentation Layer)
 <details>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliquam eros, sed placerat justo luctus tempor. Donec venenatis accumsan consequat. Nunc ac nisl finibus, finibus urna ut, vulputate dolor. Ut tellus lectus, commodo a urna non, vehicula porta mauris. Pellentesque id ornare enim. Phasellus efficitur quis metus vel dictum. Quisque sodales diam leo, sit amet tincidunt nibh gravida ac. Nunc fringilla turpis vel porta mollis. Mauris et ex quis tellus pretium mollis a id elit.
 
@@ -68,7 +68,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 
 
 <a name="example2"></a>
-## Example Title2
+## Domain Layer
+<details>
+The domain layer is the most inner part of our Architecture. It contains Entities and Repository Interfaces.
+Also, it shouldn't depend on any Layer.
+
+```text
+├── ExampleRoot
+  ├── Child1
+    ├── Child2
+    ├── Child3
+    ├── ...
+```
+</details>
+
+
+<a name="example2"></a>
+## Data Layer
 <details>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliquam eros, sed placerat justo luctus tempor. Donec venenatis accumsan consequat. Nunc ac nisl finibus, finibus urna ut, vulputate dolor. Ut tellus lectus, commodo a urna non, vehicula porta mauris. Pellentesque id ornare enim. Phasellus efficitur quis metus vel dictum. Quisque sodales diam leo, sit amet tincidunt nibh gravida ac. Nunc fringilla turpis vel porta mollis. Mauris et ex quis tellus pretium mollis a id elit.
 
