@@ -128,40 +128,36 @@ It provides us App-level consistency and it makes it easy to create new layouts 
    We were going to have this kind of code for this purpose without theming.
 ```gradle
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
     <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:layout_marginStart="10dp"
-        android:visibility="visible"
-        android:fontFamily="@font/example_font"
-        android:textAllCaps="true"
-        android:gravity="start"
         android:background="@drawable/bg_purple_radius"
+        android:fontFamily="@font/example_font"
+        android:gravity="start"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:lines="1"
         android:marqueeRepeatLimit="marquee_forever"
-        />
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:background="@drawable/bg_purple_radius"
+        android:fontFamily="@font/example_font"
+        android:gravity="start"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:layout_marginStart="10dp"
-        android:visibility="visible"
-        android:fontFamily="@font/example_font"
-        android:textAllCaps="true"
-        android:gravity="start"
-        android:background="@drawable/bg_purple_radius"
-        android:lines="1"
-        android:marqueeRepeatLimit="marquee_forever"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout> 
 ```
 
@@ -173,7 +169,6 @@ We will just define the attributes for single time in the styles.xml,
 <style name="MyPerfectTextView">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:layout_marginStart">10dp</item>
         <item name="android:visibility">visible</item>
         <item name="android:fontFamily">@font/example_font</item>
         <item name="android:textAllCaps">true</item>
@@ -190,22 +185,20 @@ It's our new Layout file!
 ```gradle
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
     <androidx.appcompat.widget.AppCompatTextView
         style="@style/MyPerfectTextView"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
     <androidx.appcompat.widget.AppCompatTextView
         style="@style/MyPerfectTextView"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ```
