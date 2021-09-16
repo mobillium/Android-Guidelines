@@ -57,6 +57,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 <details>
 The presentation layer presents the data to the User.
 
+- Interacts with the User.
 - Contains UI (Activities & Fragments).
 - Depends on Domain Layer.
 
@@ -76,10 +77,12 @@ The presentation layer presents the data to the User.
 <details>
 The domain layer is the most inner part of our Architecture.
 
-- Contains Entities and Repository Interfaces.
-- Has no dependencies with the other layers.
+- Contains the Repository Interfaces.
 - Contains business logics.
-
+- Contains the Mappers.
+- Has no dependencies with the other layers.
+- Stores the data classes that represent backend responses.
+	
 ```text
 ├── ExampleRoot
   ├── Child1
@@ -95,6 +98,10 @@ The domain layer is the most inner part of our Architecture.
 <details>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliquam eros, sed placerat justo luctus tempor. Donec venenatis accumsan consequat. Nunc ac nisl finibus, finibus urna ut, vulputate dolor. Ut tellus lectus, commodo a urna non, vehicula porta mauris. Pellentesque id ornare enim. Phasellus efficitur quis metus vel dictum. Quisque sodales diam leo, sit amet tincidunt nibh gravida ac. Nunc fringilla turpis vel porta mollis. Mauris et ex quis tellus pretium mollis a id elit.
 
+- Manages & retrieves the data from the Data Sources.
+- Contains business logics.
+- Contains the mapped data classes to be used inside the Views. 
+- Contains the Repository Implementations.
 ```text
 ├── ExampleRoot
   ├── Child1
