@@ -79,7 +79,6 @@ The domain layer is the most inner part of our Architecture.
 
 - Contains the Repository Interfaces.
 - Contains business logics.
-- Contains the Mappers.
 - Has no dependencies with the other layers.
 - Stores the data classes that represent backend responses.
 	
@@ -102,6 +101,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 - Contains business logics.
 - Contains the mapped data classes to be used inside the Views. 
 - Contains the Repository Implementations.
+- Contains the Mappers.
 ```text
 ├── ExampleRoot
   ├── Child1
