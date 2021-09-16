@@ -55,7 +55,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 <a name="example"></a>
 ## App Layer (Presentation Layer)
 <details>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliquam eros, sed placerat justo luctus tempor. Donec venenatis accumsan consequat. Nunc ac nisl finibus, finibus urna ut, vulputate dolor. Ut tellus lectus, commodo a urna non, vehicula porta mauris. Pellentesque id ornare enim. Phasellus efficitur quis metus vel dictum. Quisque sodales diam leo, sit amet tincidunt nibh gravida ac. Nunc fringilla turpis vel porta mollis. Mauris et ex quis tellus pretium mollis a id elit.
+The presentation layer presents the data to the User.
+
+- Contains UI (Activities & Fragments).
+- Depends on Domain Layer.
+
 
 ```text
 ├── ExampleRoot
@@ -70,8 +74,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliq
 <a name="example2"></a>
 ## Domain Layer
 <details>
-The domain layer is the most inner part of our Architecture. It contains Entities and Repository Interfaces.
-Also, it shouldn't depend on any Layer.
+The domain layer is the most inner part of our Architecture.
+
+- Contains Entities and Repository Interfaces.
+- Has no dependencies with the other layers.
+- Contains business logics.
 
 ```text
 ├── ExampleRoot
