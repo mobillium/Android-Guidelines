@@ -3,6 +3,12 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis aliquam eros, sed placerat justo luctus tempor. Donec venenatis accumsan consequat. Nunc ac nisl finibus, finibus urna ut, vulputate dolor. Ut tellus lectus, commodo a urna non, vehicula porta mauris. Pellentesque id ornare enim. Phasellus efficitur quis metus vel dictum. Quisque sodales diam leo, sit amet tincidunt nibh gravida ac. Nunc fringilla turpis vel porta mollis. Mauris et ex quis tellus pretium mollis a id elit.
 </p>
 
+<h1 align="center">
+	
+![Screenshot](arch_graph.png)
+	
+</h1>
+
 ### Table of Contents
 - [app](#example)
 	- [bindings](#example)
